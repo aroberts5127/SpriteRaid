@@ -27,6 +27,8 @@ public class SpawnInSprites : MonoBehaviour
 
     private IEnumerator SpawnImagesRoutine()
     {
+        while (PrefabList.instance == null)
+            yield return null;
         int spawnInc = 0;
         while (true)
         {
@@ -46,6 +48,8 @@ public class SpawnInSprites : MonoBehaviour
     }
     private IEnumerator SpawnImagesRoutineRight()
     {
+        while (PrefabList.instance == null)
+            yield return null;
         int spawnInc = 0;
         while (true)
         {
